@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LOGIN</title>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+</style>
+<script>
+function login() {
+	var username = document.getElementById("uname").value;
+	var password = document.getElementById("psw").value;
+	//send username & password
+	//if valid goes to "htmltest.html"
+	//else "invalid login"
+	if(username==""||password=="")alert("Please fill out all fields");
+	else if(username=="asd" && password=="zxc")
+		window.location.replace("Htmltest.html");
+	else {alert("Incorrect username and/or password.");
+		document.getElementById("psw").value = "";
+	}
+}
+</script>
+</head>
+
+<body>
+<h1>LOGIN</h1>
+<p>
+Username 
+<input type="text" placeholder="Enter Username" name="uname" id="uname" required><br />
+<br />Password 
+<input type="password" placeholder="Enter Password" name="psw" id="psw" required><br />
+<br /><button type="submit" onclick="login()">Login</button>
+</p>
+</body>
+</html>
